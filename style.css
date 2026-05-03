@@ -1,0 +1,122 @@
+html{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(145deg, rgb(173, 118, 184), #fcefe2);
+}
+body{
+    margin: 0;
+    display: flex;          
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;      
+}
+.content{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(234, 217, 224);
+    width: 600px;
+    margin: 0 auto;
+
+}
+.inputs{
+    display: flex; 
+    align-items: center;
+    gap: 10px; 
+    width: 90%;
+    margin-bottom: 10px;
+    
+}
+.title-input, .body-input{
+    flex: 1;  
+    height: 40px;  
+    padding: 0 10px;   
+    border-radius: 5px;
+    box-sizing: border-box; 
+    border-color: antiquewhite;
+    outline: none; 
+    background-color: white;     
+}
+
+.done{
+    cursor: pointer;
+    background-color: papayawhip;
+    border: none; 
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    color: palevioletred;
+    font-weight: 700;
+}
+
+
+.title{
+    text-align: center;
+    color: palevioletred;
+    font-family: fantasy;
+    font-weight: 300;
+    font-size: 45px;
+    margin: 30px;
+}
+.note{
+    background-color: papayawhip;
+    padding: 15px;
+    margin: 10px 0px;
+    width: 100%; 
+     box-sizing: border-box;
+    min-height: 150px;
+}
+.notes {
+    width: 90%;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;    
+}
+.note:last-child{
+    margin-bottom: 20px;
+}
+.note-up{
+    display: flex;  
+    flex-direction: row;
+    align-items: center;     
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.note-title{
+    color: palevioletred;
+    font-size: 30px;
+    margin: 0;
+}
+
+
+.edit-body-input{
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    max-height: 300px;
+}
+.edit-title-input{
+    color: palevioletred;
+    font-size: 30px;
+    margin: 0;
+}
+
+.note-buttons{
+    display: flex;
+    gap: 10px;  
+}
+.delete-btn{
+    cursor: pointer;    
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+
+.correct {
+    cursor: pointer;    
+    background: none;
+    border: none;
+    font-size: 20px;
+}
