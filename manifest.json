@@ -1,0 +1,21 @@
+{
+  "name": "My Notes",
+  "short_name": "Notes",
+  "description": "app for notes",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#d4a5a5",
+  "background_color": "#fcefe2",
+  "icons": [
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+        {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

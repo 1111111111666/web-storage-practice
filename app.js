@@ -167,3 +167,14 @@ window.addEventListener('load', function(){
 });
 
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js')
+      .then(function(registration) {
+        console.log('Service Worker зарегистрирован');
+      })
+      .catch(function(error) {
+        console.log('Ошибка регистрации Service Worker');
+      });
+  });
+}
