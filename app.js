@@ -160,21 +160,37 @@ window.addEventListener('load', function(){
     loadFromLocalStorage();
     renderNotes();
     const addButton = document.querySelector('.done');
+    const netwButton = document.querySelector('#networkCheck');
     addButton.onclick = function(event){
         event.preventDefault();
         addNewNote();
     }
+    netwButton.onclick = function(event){
+        event.preventDefault();
+        checkNetwork();
+    }
 });
 
-
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js')
-      .then(function(registration) {
-        console.log('Service Worker зарегистрирован');
-      })
-      .catch(function(error) {
-        console.log('Ошибка регистрации Service Worker');
-      });
-  });
+  navigator.serviceWorker.register('/sw.js')
+    .then(() => console.log('SW работает'))
+    .catch(err => console.log('SW ошибка:', err));
+} else {
+  console.log('SW не поддерживается');
 }
+
+function checkNetwork() {
+  if (navigator.onLine) {
+    alert(' Интернет есть');
+  } else {
+    alert(' Нет интернета, но заметки работают офлайн!');
+  }
+}
+
+window.addEventListener('online', () => {
+  console.log('🟢 Интернет появился');
+});
+
+window.addEventListener('offline', () => {
+  console.log('🔴 Интернет пропал');
+});
